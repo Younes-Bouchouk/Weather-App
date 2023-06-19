@@ -12,12 +12,18 @@ body {
 
 #app {
     margin: 100px auto;
-    width: 90%;
+    width: 100%;
     max-width: 470px;
     background: linear-gradient(135deg, #00feba, #5b548a);
     border-radius: 20px;
     padding: 30px;
     text-align: center;
+}
+
+@media screen and (max-width: 715px){
+    #app {
+        margin: 0;
+    }
 }
 
 #search {

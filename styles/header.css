@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #222;
+    color: white
+}
+
+#app {
+    margin: 100px auto;
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 290px;
+    height: 60px;
+    padding-left: 20px ;
+    border-radius: 30px;
+    background: #ebfffc;
+    font-size: 18px;
+    margin: 10px;
+    border: 0;
+}
+
+button {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    border: 0;
+}
+
+button img {
+    width: 30%;
+}
+
+#error {
+    display: none;
+    font-size: 13px;
+    text-align: start;
+    padding: 0 30px;
+}

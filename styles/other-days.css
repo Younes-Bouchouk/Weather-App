@@ -1,0 +1,49 @@
+#other-days {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    /* grid-auto-rows: minmax( 200px); */
+}
+
+.day-card {
+    background-color: rgb(255, 255, 255, 0.3);
+    /* background: linear-gradient(135deg, #8a5454, #fefa00); */
+    border-radius: 5px;
+    /* opacity: 0.5; */
+    font-size: 15px;
+}
+
+h3 { /* headlines from other days */
+    padding-top: 0.5em;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+h4 { /* date of other days */
+    /* padding-top: 0.5em; */
+    font-size: 9px;
+    font-weight: 100;
+}
+
+.icon-day {
+    width: 70px;
+}
+
+.min-max-temp {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.max-temp {
+    color: rgb(203, 44, 42)
+}
+
+.min-temp {
+    color: rgb(42, 101, 203)
+}
+
+span {
+    padding: 0 4px;
+}

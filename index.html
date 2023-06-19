@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;800&display=swap"
+    rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/current-weather.css">
+    <link rel="stylesheet" href="styles/other-days.css">
+
+  
+    <title>Météo</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <div id="search">
+        <input type="text" id="city" placeholder="Ville" spellcheck="false">
+        <button onclick="getCurrentWeather()"><img src="img/search.png"></button>
+        <button onclick="getWeatherTEST()">TEST</button>
+      </div>
+
+      <div id="error">
+        <p>* Nom de ville introuvable</p>
+      </div>
+
+      <div id="weather">
+
+        <!-- <p id="current-date">Dimanche 18 Juin</p> -->
+
+        <div id="current-weather">
+
+          <div id="main-icon">
+            <img id="weather-icon" src="img/rain.png">
+
+          </div>
+
+          <div id="info-city">
+
+            <p id="current-date"></p>
+            
+            <div id="unit">
+
+              <div id="info-temp">
+                <h1 id="temp">22</h1>
+                <p>°c</p>
+              </div>
+              
+              <div id="details">
+                <div>
+                  <p>Humidité :</p>
+                  <p id="humidity">50%</p>
+                </div>
+
+                <div>
+                  <p>Vent :</p>
+                  <p id="wind">15 km/h</p>
+                </div>
+
+              </div>
+
+            </div>
+            
+            <h2 id="name">Paris</h2>
+          
+          </div>
+          
+        </div>
+
+        <div id="other-days">
+
+          <div id="day1" class="day-card">
+            <div class="date-other-day">
+              <h3 id="title-day1">Demain</h3>
+              <h4 id="date-day1">17 juin</h4>
+              <img id="icon-day1" class="icon-day" src="img/clouds.png" >
+
+              <div class="min-max-temp">
+                <p class="max-temp" id="max-temp1">28°</p>
+                <span>/</span>
+                <p class="min-temp" id="min-temp1">12°</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="day2" class="day-card">            
+            <div class="date-other-day">
+              <h3 id="title-day2">Dimanche</h3>
+              <h4 id="date-day2">17 juin</h4>
+              <img id="icon-day2" class="icon-day" src="img/clouds.png" >
+
+              <div class="min-max-temp">
+                <p class="max-temp" id="max-temp2">28°</p>
+                <span>/</span>
+                <p class="min-temp" id="min-temp2">12°</p>
+              </div>
+            </div>
+          </div>  
+
+          <div id="day3" class="day-card">
+            <div class="date-other-day">
+              <h3 id="title-day3">Lundi</h3>
+              <h4 id="date-day3">17 juin</h4>
+              <img id="icon-day3" class="icon-day" src="img/clouds.png" >
+
+              <div class="min-max-temp">
+                <p class="max-temp" id="max-temp3">28°</p>
+                <span>/</span>
+                <p class="min-temp" id="min-temp3">12°</p>
+              </div>
+            </div>
+          </div>
+          
+          <div id="day4" class="day-card">           
+            <div class="date-other-day">
+              <h3 id="title-day4">Mardi</h3>
+              <h4 id="date-day4">17 juin</h4>
+              <img id="icon-day4" class="icon-day" src="img/clouds.png" >
+
+              <div class="min-max-temp">
+                <p class="max-temp" id="max-temp4">28°</p>
+                <span>/</span>
+                <p class="min-temp" id="min-temp4">12°</p>
+              </div>
+            </div>
+          </div>
+          
+          <div id="day5" class="day-card">           
+            <div class="date-other-day">
+              <h3 id="title-day5">Mercredi</h3>
+              <h4 id="date-day5">17 juin</h4>
+              <img id="icon-day5" class="icon-day" src="img/clouds.png" >
+
+              <div class="min-max-temp">
+                <p class="max-temp" id="max-temp5">28°</p>
+                <span>/</span>
+                <p class="min-temp" id="min-temp5">12°</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <script src="src/current-weather.js"></script>
+    <script src="src/other-days.js"></script>
+  </body>
+</html>

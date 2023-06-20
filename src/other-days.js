@@ -1,4 +1,4 @@
-const url2 = 'http://api.openweathermap.org/data/2.5/forecast?lang=fr&units=metric&q='
+const url2 = 'https://api.openweathermap.org/data/2.5/forecast?lang=fr&units=metric&q='
 // const key = '&appid=9eb12fea20f30163d3c454e7bd4e2f4e' ;
 let data2;
 

@@ -57,7 +57,7 @@ function getWeatherOtherDate() {
 
 
 function setIconOtherDate(n) {
-    document.getElementById(`icon-day${n}`).src = `img/${data2.list[n*8].weather[0].main}.png`
+    document.getElementById(`icon-day${n}`).src = `img/${data2.list[n].weather[0].main}.png`
     
     // console.log("n = "+ n + " | " + n*8 + " - " + data2.list[n*8].weather[0].main)
 

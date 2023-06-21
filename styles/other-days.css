@@ -1,15 +1,23 @@
 #other-days {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 5px;
-    /* grid-auto-rows: minmax( 200px); */
+    gap: 1px;
+}
+
+@media screen and (max-width: 430px){
+    #other-days {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+    }
+
+    #day5 {
+        display: none;
+    }
 }
 
 .day-card {
     background-color: rgb(255, 255, 255, 0.3);
-    /* background: linear-gradient(135deg, #8a5454, #fefa00); */
     border-radius: 5px;
-    /* opacity: 0.5; */
     font-size: 15px;
 }
 

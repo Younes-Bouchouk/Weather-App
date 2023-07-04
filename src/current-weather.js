@@ -38,6 +38,8 @@ async function getCurrentWeather() {
     .then(function(){
       getWeatherOtherDate()
       getIconOtherDate()
+      setListTemp()
+      TempMinMax()
     })
   }
 

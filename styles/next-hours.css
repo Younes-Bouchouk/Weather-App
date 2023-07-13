@@ -1,0 +1,27 @@
+#next-hours {
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr);
+    gap: 3px; */
+    height: 150px;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin: 10px 0;
+    padding-left: 0px;
+    overflow-x: auto;
+    scrollbar-color: #fed800 white;
+    
+
+}
+
+.hour-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 22%;
+    padding: 5px 5px;
+}
+
+.hour-card img {
+    width: 90%;
+}

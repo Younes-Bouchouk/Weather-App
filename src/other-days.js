@@ -1,4 +1,8 @@
+// Api pour obtenir les donnée météorologiques des 5 prochains jours
+// Elle permet d'obtenir seulement la météo des heures suivantes : 
+//      0h, 3h, 6h, 9h, 12h, 15h, 18h, 21h 
 const url2 = 'https://api.openweathermap.org/data/2.5/forecast?lang=fr&units=metric&q='
+
 // const key = '&appid=9eb12fea20f30163d3c454e7bd4e2f4e' ;
 let data2;
 
@@ -6,18 +10,11 @@ async function getOtherWeather() {
   var city = document.getElementById('city').value;
   var api = await fetch(url2 + city + key);
 
-  var data = await api.json();
+  data2 = await api.json();
 
-  data2 = data
+//   data2 = data
   console.log(data2)
   return data2
-
-//   console.log(data2.list[0].weather[0].main)
-//   console.log(data2.list[8].weather[0].main)
-//   console.log(data2.list[16].weather[0].main)
-//   console.log(data2.list[24].weather[0].main)
-//   console.log(data2.list[32].weather[0].main)
-
 }
 
 function firstLetterUpper(mot) {
@@ -34,19 +31,31 @@ function setWeatherOtherDate(n) {
 
     date.setDate(date.getDate() + n)
 
+    // var day = String(date.getDate()).padStart(2, '0');
+    // var month = String(date.getMonth() + 1).padStart(2, '0');
+
+
+
     var optionWeekDay = { weekday: 'long' };
-    var optionMonth = { month: 'long' };
+    // var optionMonth = { month: 'long' };
 
 
-    var weekDay = date.toLocaleDateString('fr-FR', optionWeekDay);
-    var month = date.toLocaleDateString('fr-FR', optionMonth);
+    var weekDay = date.toLocaleDateString('fr-FR', optionWeekDay).slice(0, 3);
+    // var month = date.toLocaleDateString('fr-FR', optionMonth);
 
-    if (n == 1) {
-        weekDay = "Demain"
-    }
+    // if (n == 1) {
+    //     weekDay = "Demain"
+    // }
 
-    document.getElementById('title-day' + n).innerHTML = firstLetterUpper(weekDay)
-    document.getElementById('date-day' + n).innerHTML = date.getDate() + ' ' + firstLetterUpper(month)
+    var month = ('0' + (date.getMonth() + 1)).slice(-2);
+    var day = ('0' + date.getDate()).slice(-2);
+
+    date = day + '/' + month;
+
+    document.getElementById('title-day' + n).innerHTML = firstLetterUpper(weekDay) + '';
+    document.getElementById('date-day' + n).innerHTML = date
+
+    // document.getElementById('date-day' + n).innerHTML = date.getDate() + ' ' + firstLetterUpper(month);
 
 }
 
@@ -117,18 +126,18 @@ function setListTemp() {
         console.log(setDateTomorrow() + ' / ' + data2.list[n].dt_txt)
         n++
     }
-    console.log(n)
+    // console.log(n)
 
     for (var i = 1; i < 5; i++ ) {
         for (var u = 0; u < 8; u++){
             temp['day'+i].push(Math.round(data2.list[n].main.temp))
             n++
         }
-        console.log(i)
-        console.log(temp)
+        // console.log(i)
+        // console.log(temp)
     }
     var min = Math.max(...temp[`day${1}`])
-    console.log(min)
+    // console.log(min)
 }
 
 function TempMinMax() {
@@ -138,6 +147,7 @@ function TempMinMax() {
     }
 
 }
+
 
 
 

@@ -1,6 +1,6 @@
 #other-days {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 3px;
     
 }
@@ -17,31 +17,49 @@
 }
 
 .day-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 10px;
+    height: 50px;
     background-color: rgb(255, 255, 255, 0.3);
     border-radius: 5px;
     /* font-size: 15px; */
 }
 
-h3 { /* headlines from other days */
-    padding-top: 0.5em;
-    font-size: 13px;
-    font-weight: 600;
+.day-card div {
+    display: flex;
 }
+
+h3 { /* headlines from other days */
+    width: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: start;
+}
+
+/* h3::after {
+    content: '-';
+    padding: 0 5px;
+} */
 
 h4 { /* date of other days */
     /* padding-top: 0.5em; */
-    font-size: 11px;
+    width: 50px;
+    font-size: 15px;
     font-weight: 100;
+    text-align: center;
 }
 
 .icon-day {
     /* width: 80px; */
-    width: 90%;
+    height: 100%;
 }
 
 .min-max-temp {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 15px;
     font-weight: 600;
 }
@@ -56,4 +74,8 @@ h4 { /* date of other days */
 
 span {
     padding: 0 8px;
+    background: linear-gradient(90deg, rgb(42, 101, 203), rgb(203, 44, 42));
+    height: 2px;
+    width: 100px;
+    margin: 0 10px;
 }

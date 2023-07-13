@@ -1,3 +1,4 @@
+// Api pour obtenir les donnée météorologiques actuelles d'une ville
 const url = 'https://api.openweathermap.org/data/2.5/weather?lang=fr&units=metric&q=' ;
 const key = '&appid=9eb12fea20f30163d3c454e7bd4e2f4e' ;
 
@@ -40,6 +41,11 @@ async function getCurrentWeather() {
       getIconOtherDate()
       setListTemp()
       TempMinMax()
+      getNextHours()
+      
+      .then(function(){
+        getNextTime()
+      })
     })
   }
 

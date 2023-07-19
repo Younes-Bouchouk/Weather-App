@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 430px){
     #other-days {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 1px;
     }
 
